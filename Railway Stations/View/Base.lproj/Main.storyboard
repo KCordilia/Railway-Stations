@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Railway_Stations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mEU-zM-4ij">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pTy-X9-0Ti"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mEU-zM-4ij" secondAttribute="bottom" constant="-34" id="1Zu-Ba-zhB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mEU-zM-4ij" secondAttribute="trailing" id="ArJ-LX-fXz"/>
+                            <constraint firstItem="mEU-zM-4ij" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="Paf-43-CmC"/>
+                            <constraint firstItem="mEU-zM-4ij" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oY4-0g-HUz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="customCalloutView" destination="G03-mM-KIi" id="q02-Sb-9ev"/>
+                        <outlet property="mapView" destination="mEU-zM-4ij" id="4qf-bd-Yc7"/>
+                        <outlet property="stationNameLabel" destination="ytC-Cd-FN4" id="V7U-zE-k1N"/>
+                        <outlet property="stationTypeLabel" destination="RvT-a5-kZU" id="zUX-OS-1AR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="G03-mM-KIi">
+                    <rect key="frame" x="0.0" y="0.0" width="329" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytC-Cd-FN4">
+                            <rect key="frame" x="0.0" y="0.0" width="329" height="67"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvT-a5-kZU">
+                            <rect key="frame" x="0.0" y="64" width="329" height="64"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ytC-Cd-FN4" firstAttribute="trailing" secondItem="6Hz-1b-mwb" secondAttribute="trailing" id="FYQ-FF-zVV"/>
+                        <constraint firstItem="RvT-a5-kZU" firstAttribute="leading" secondItem="6Hz-1b-mwb" secondAttribute="leading" id="NS4-OX-TjF"/>
+                        <constraint firstItem="RvT-a5-kZU" firstAttribute="top" secondItem="6Hz-1b-mwb" secondAttribute="top" constant="20" id="Obx-gi-7cQ"/>
+                        <constraint firstAttribute="bottom" secondItem="ytC-Cd-FN4" secondAttribute="bottom" constant="61" id="WZj-Vt-Sgt"/>
+                        <constraint firstItem="RvT-a5-kZU" firstAttribute="trailing" secondItem="6Hz-1b-mwb" secondAttribute="trailing" id="cZ6-OA-7SP"/>
+                        <constraint firstItem="ytC-Cd-FN4" firstAttribute="leading" secondItem="6Hz-1b-mwb" secondAttribute="leading" id="lXd-9i-tun"/>
+                        <constraint firstItem="ytC-Cd-FN4" firstAttribute="top" secondItem="G03-mM-KIi" secondAttribute="top" id="pZA-m5-7nT"/>
+                        <constraint firstAttribute="bottom" secondItem="RvT-a5-kZU" secondAttribute="bottom" id="tXy-Lf-vyK"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="6Hz-1b-mwb"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
